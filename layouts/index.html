@@ -8,14 +8,6 @@
         {{ partial "nav.html" . }}
         {{ partial "hero.html" (dict "data" $p)}}
         {{ partial "network.html" (dict "data" $p) }}
-        {{ partial "work-timeline.html" (dict "data" $p) }}
-        
-        {{ partial "about.html" . }}
-        {{ partial "portfolio.html" . }}
-        {{ partial "location.html" . }}
-        {{ partial "aside.html" . }}
-        {{ partial "contact.html" . }}
-        {{ partial "modals.html" . }}
         {{ partial "js.html" . }}
 
         {{ template "_internal/google_analytics.html" . }}
