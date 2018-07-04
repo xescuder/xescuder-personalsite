@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body id="page-top">
+        {{ partial "nav.html" . }}
+        {{ partial "hero.html" . }}
+        {{ partial "about.html" . }}
+        {{ partial "services.html" . }}
+        {{ partial "portfolio.html" . }}
+        {{ partial "location.html" . }}
+        {{ partial "aside.html" . }}
+        {{ partial "contact.html" . }}
+        {{ partial "modals.html" . }}
+        {{ partial "js.html" . }}
+
+        {{ template "_internal/google_analytics.html" . }}
+    </body>
+</html>
