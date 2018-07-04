@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+    {{ $p := .Site.GetPage "page" "home.md" }}
     <head>
-        {{ partial "head.html" . }}
+        {{ partial "head.html" (dict "data" $p)}}
     </head>
     <body id="page-top">
         {{ partial "nav.html" . }}
-        {{ partial "hero.html" . }}
+        {{ partial "hero.html" (dict "data" $p)}}
+        {{ partial "network.html" (dict "data" $p) }}
+        {{ partial "work-timeline.html" (dict "data" $p) }}
+        
         {{ partial "about.html" . }}
-        {{ partial "services.html" . }}
         {{ partial "portfolio.html" . }}
         {{ partial "location.html" . }}
         {{ partial "aside.html" . }}

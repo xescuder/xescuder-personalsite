@@ -1,18 +1,18 @@
 {{ "<!-- HEADER -->" | safeHTML }}
+{{ $p := .data }}
+
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            {{ with .Site.Params.hero.slogan }}
-                <h1>{{ . | markdownify  }}</h1>
+            {{ if $p.Params.hero_slogan }}
+                <h1>{{ $p.Params.hero_slogan | markdownify  }}</h1>
             {{ end }}
-            {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
-                <hr>
+            <hr>
+            {{ if $p.Params.hero_subtitle }}
+                <p>{{ $p.Params.hero_subtitle | markdownify }}</p>
             {{ end }}
-            {{ with .Site.Params.hero.subtitle }}
-                <p>{{ . | markdownify }}</p>
-            {{ end }}
-            {{ with .Site.Params.hero.buttonText }}
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
+            {{ if $p.Params.hero_buttonText }}
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ $p.Params.hero_buttonText }}</a>
             {{ end }}
         </div>
     </div>
