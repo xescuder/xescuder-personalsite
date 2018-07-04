@@ -27,7 +27,7 @@ export default {
   entry: {
     app: ["./js/app"],
     cms: ["./js/cms"],
-    vendor: ["./vendor/*.js"]
+    vendor: ["./js/vendor/**"]
   },
   output: {
     path: path.join(__dirname, "dist"),
