@@ -17,4 +17,4 @@ education_entries:
       specific collection of beans from a single country. The name of
       the coffee is then usually the place it was grown to whatever
       degree available.
-   
+---
