@@ -5,6 +5,21 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+
+  - name: "whoami" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Who am I"
+    folder: "site/content/whoami"
+    create: true
+    fields:
+    - label: Education
+      name: education_entries
+      widget: list
+      fields:        
+        - {label: "from", name: "date", widget: "datetime"}
+        - {label: "to", name: "date", widget: "datetime"}
+        - {label: "heading", name: "heading", widget: "string"}
+        - {label: "text", name: "text", widget: "text"}
+        
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
