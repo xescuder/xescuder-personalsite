@@ -3,16 +3,22 @@
     {{ $p := .Site.GetPage "page" "home.md" }}
     <head>
         {{ partial "head.html" (dict "data" $p)}}
-        <link rel="stylesheet" href="/assets/css/resume/styles.css" type="text/css">
+         <link rel="stylesheet" href="/assets/css/resume/styles.css" type="text/css">
         <link rel="stylesheet" href="/assets/css/resume/responsive.css" type="text/css">
 		<link rel="stylesheet" href="/assets/css/common-css/ionicons.css">	
 		<link  rel="stylesheet" href="/assets/css/common-css/fluidbox.min.css">
 
+    </head>   
     <body id="page-top">
    		{{ partial "nav.html" . }}   		
-   		{{ partial "intro.html" (dict "data" $p) }}   		
+   		{{ partial "hero.html" (dict "data" $p)}}
+   		{{ partial "intro.html" (dict "data" $p)}}
+   		{{ partial "jobs.html" (dict "data" $p)}}
+ 	    {{ partial "education.html" (dict "data" $p)}}
+ 	    {{ partial "skills.html" (dict "data" $p)}}
+
         {{ partial "network.html" (dict "data" $p) }}
-        {{ partial "education.html" (dict "data" $p) }}
+
         {{ partial "js.html" . }}      
         {{ template "_internal/google_analytics.html" . }}
     </body>

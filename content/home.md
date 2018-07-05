@@ -5,6 +5,7 @@ role: Quality Office Manager
 born: 04/10/1973
 email: xescuder@gmail.com
 marital_status: Married
+profile_title: Profile
 profile_image: /media/profile-1-250x250.jpg
 
 hero_slogan: 'V  = [K + S ] x A'
