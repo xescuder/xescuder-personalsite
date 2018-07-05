@@ -15,6 +15,7 @@ idea="https://themes.gohugo.io/theme/creative/"
 
 	[params.navigation.links]
 		about     = "About"
+		resume 	  = "Resumé"
 		services  = "Education"
 		portfolio = "Portfolio"
 		contact   = "Contact"
