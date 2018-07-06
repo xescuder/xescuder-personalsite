@@ -9,7 +9,9 @@ profile_title: Profile
 profile_image: /media/profile-1-250x250.jpg
 
 about_path: >-
-  "Fully committed to my job I enjoy software, quality and testing, where I have been actively involved for more than ten years, at CTTI (Centre for Telecommunications and IT of the Generalitat de Catalunya, Catalonia Government), where I am in charge of the Quality Government Office. I have personal initiative to enhance myself and apply this improvement to teams and processes. Good skills and knowledge in quality and testing, software architecture and development methodologies"
+
+  <span class="fas fa-quote-left"></span>
+  I enjoy software engineering, architecture, quality and testing. At my spare time I like to watch tv shows. Curious without limits<span class="fas fa-quote-right"></span>
 
 hero_slogan: 'V  = [K + S ] x A'
 hero_subtitle: 'V (value) = [K (knowledge) + S (skills)] x A (attitude)'
@@ -61,15 +63,13 @@ education_list:
     when: '2017'
   
 
- 
-
 jobs_title: 'Work Experience'
 jobs_list:
   - title: 'Quality Governance Office Manager'
     where: 'CTTI (Generalitat de Catalunya)'
     when: '(Feb 2013– Present)'
     description: >-
-      Quality Office at the new Government Model (more efficiency, cost reduction, transformation)
+      Quality Office at the new Government Model (more efficiency, cost reduction, transformation)      
       
       Management of the Quality Governance Office, focused on quality assurance and quality control, with the following responsibilities:
 
@@ -84,17 +84,31 @@ jobs_list:
     when: '(Mar 2008– Feb 2013)'
     description: >-
        Management of Quality and Testing Office, whose main tasks were:
+
           * Review and support of testing deliverables (test plans, test specifications, scripts, test reports and metrics).
           * Independent test execution: functional testing automation, performance testing
           * Management and execution of task forces to solve incidents with unknown root cause (performance diagnosis, profiling, …)
           * Code reviews
         Eight person team, with a budget of 750K per year
 skills_title: 'Skills'
+
 skills: >-
-  * Ability to define and adapt strategies, standards and methodologies. Ability to identify tactical opportunities
-  * High technical knowledge, which enables efficient management of technical teams and complex projects
-  * Good communication skills and training abilities
-  * Ability to develop clear and concise documentation.
-  * Ability to review and test deliverables, applications and attention to detail.
+
+    * Ability to define and adapt strategies, standards and methodologies. Ability to identify tactical opportunities
+
+    * High technical knowledge, which enables efficient management of technical teams and complex projects
+
+    * Good communication skills and training abilities
+
+    * Ability to develop clear and concise documentation.
+
+    * Ability to review and test deliverables, applications and attention to detail.
+
+
+hobbies_title: 'Hobbies'
+hobbies_list:
+    - title: Playing padel
+    - title: Wath tv shows
+    - title: My family
 
 ---
