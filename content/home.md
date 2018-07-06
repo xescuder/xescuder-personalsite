@@ -69,27 +69,47 @@ jobs_list:
     where: 'CTTI (Generalitat de Catalunya)'
     when: '(Feb 2013– Present)'
     description: >-
-      Quality Office at the new Government Model (more efficiency, cost reduction, transformation)      
       
-      Management of the Quality Governance Office, focused on quality assurance and quality control, with the following responsibilities:
-
         * Definition of quality standards, processes and tools (quality model). Training and communication. Institutionalization.
+
         * Quality governance of suppliers (for quality control, mainly focused on qualification testing)
+
         * Product audits and reviews, from internal quality (requirements, design, source code,...) to external quality (usability, availability, efficiency, portability, ...)
+
         * Independence testing: performance testing, exploratory testing, …
+
         * Root cause analysis and diagnostics of difficult problems (availability, performance bottlenecks)
-        Five person team, with a budget of 450K € per year
+
   - title: 'Quality and Testing Office Manager'
     where: 'CTTI (Generalitat de Catalunya)'
     when: '(Mar 2008– Feb 2013)'
     description: >-
-       Management of Quality and Testing Office, whose main tasks were:
 
-          * Review and support of testing deliverables (test plans, test specifications, scripts, test reports and metrics).
-          * Independent test execution: functional testing automation, performance testing
-          * Management and execution of task forces to solve incidents with unknown root cause (performance diagnosis, profiling, …)
-          * Code reviews
-        Eight person team, with a budget of 750K per year
+        * Review and support of testing deliverables (test plans, test specifications, scripts, test reports and metrics).
+
+        * Independent test execution: functional testing automation, performance testing
+
+        * Management and execution of task forces to solve incidents with unknown root cause (performance diagnosis, profiling, …)
+
+        * Code reviews
+
+  - title: 'Software architect'
+    where: 'CTTI (Generalitat de Catalunya)'
+    when: '(May 2006 - Feb 2008)'
+    description: >-
+
+        * Technical Office Manager of Java Enterprise development, using an standard framework developed in-house, named Canigó, and mandatory for all our suppliers (roadmap definition, technical user support, …)
+
+        * Follow-up and review of new technologies and innovation
+
+        * Definition and review of standards
+
+
+  - title: 'Software Architect and Development Methodologies'
+    where: 'Cap Gemini'
+    when: '(1998 - 2004)'
+
+
 skills_title: 'Skills'
 
 skills: >-
