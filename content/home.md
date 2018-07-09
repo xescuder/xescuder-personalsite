@@ -105,9 +105,18 @@ jobs_list:
         * Definition and review of standards
 
 
-  - title: 'Software Architect and Development Methodologies'
+  - title: 'Software Architect and Development Team Management'
     where: 'Cap Gemini'
     when: '(1998 - 2004)'
+
+
+projects_title: 'Projects'
+projects_list:
+  - title: 'Euroscreener - Startup (Chief Technical Officer and Full Stack Developer)'
+    when: '(2014 – 2016)'
+    description: >-
+      
+        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for investors and traders to filter stocks from Europe markets based on indicators (stocks at the maximum historical price, above average volume, above their 200-day moving average, with Relative Strength Index (RSI) values between a specified range) and several trading strategies. It allows also to analyse graphically the results, with a drawing tool.
 
 
 skills_title: 'Skills'
