@@ -1,7 +1,7 @@
 ---
 title: Xavier Escudero
 name: Xavier Escudero Sabadell
-role: Quality Office Manager
+role: Software and Quality Manager
 born: 04/10/1973
 email: xescuder@gmail.com
 marital_status: Married
@@ -11,10 +11,10 @@ profile_image: /media/profile-1-250x250.jpg
 about_path: >-
 
   <span class="fas fa-quote-left"></span>
-  I enjoy software engineering, architecture, quality and testing. In my spare time I like to watch tv shows. Curious without limits<span class="fas fa-quote-right"></span>
+  I enjoy software engineering, architecture, quality and testing. In my spare time I like to watch tv shows. Curious without limits.<span class="fas fa-quote-right"></span>
 
-hero_slogan: 'V  = [K + S ] x A'
-hero_subtitle: 'V (value) = [K (knowledge) + S (skills)] x A (attitude)'
+hero_slogan: 'Xavier Escudero Sabadell'
+hero_subtitle: 'Software and Quality Manager (mmmm, also Software Engineer in DNA)'
 hero_buttonText: 'Find out more'
 
 networks_title: Networks
@@ -116,7 +116,7 @@ projects_list:
     when: '(2014 – 2016)'
     description: >-
       
-        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for investors and traders to filter stocks from Europe markets based on indicators (stocks at the maximum historical price, above average volume, above their 200-day moving average, with Relative Strength Index (RSI) values between a specified range) and several trading strategies. It allows also to analyse graphically the results, with a drawing tool.
+        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for investors and traders to find best stocks for investment
 
 
 skills_title: 'Skills'

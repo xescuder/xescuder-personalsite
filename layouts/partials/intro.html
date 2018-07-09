@@ -14,9 +14,9 @@
         </div>
         {{ end }}
 
-       	<div class="row">
+       	<div class="row well">
 		
-			<div class="col-sm-8 col-md-4 col-lg-3">
+			<div class="col-sm-8 col-md-4 col-lg-3 text-center">
 				<div class="profile-img margin-b-30">						
 					<img src="{{ $p.Params.profile_image}}"
 				></div>
@@ -29,15 +29,9 @@
 					<ul class="margin-tb-30">
 						<li><b class="font-yellow">BORN</b> : {{$p.Params.born}}</li>
 						<li><b class="font-yellow">EMAIL</b> : {{$p.Params.email}}</li>
-						<li><b class="font-yellow">MARITAL STATUS</b> : {{$p.Params.marital_status}}</li>
 					</ul>
 				</div>					
 			</div><!-- col-sm-8 -->
-			
-			<div class="col-sm-10 col-md-3 col-lg-3">
-				<a class="downlad-btn" href="#">Download CV</a>
-			</div><!-- col-lg-2 -->
-	
 		</div><!-- row -->
 	
        
