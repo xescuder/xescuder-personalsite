@@ -11,7 +11,7 @@ profile_image: /media/profile-1-250x250.jpg
 about_path: >-
 
   <span class="fas fa-quote-left"></span>
-  I enjoy software engineering, architecture, quality and testing. In my spare time I like to watch tv shows. Curious without limits.<span class="fas fa-quote-right"></span>
+  I enjoy software engineering, architecture, quality and testing. I am also a teacher after work. In my spare time I like to watch tv shows. Curious without limits.<span class="fas fa-quote-right"></span>
 
 hero_slogan: 'Xavier Escudero Sabadell'
 hero_subtitle: 'Software and Quality Manager (mmmm, also Software Engineer in DNA)'
@@ -63,6 +63,25 @@ education_list:
     when: '2017'
   
 
+teaching_title: 'Teaching Experience'
+teaching: >-
+
+   * Software Engineering - UOC (since 2018)
+
+   * Project Management Software - UPC (since 2017) (Agile, Scrum, Agile Testing, Extreme Programming, …)
+
+   * Software Quality Management postgraduate – UPC School (since 2018)
+
+   * Agile IT Management (Scrum, Devops and Lean) postgraduate - UPC School (since 2015)
+
+   * Project and Quality Management postgraduate – UPC School (since 2016)
+
+   * ISTQB Test Foundation Courses – Netmind (2015-2017)
+
+   * Final Year Projects Consultant – UOC (2008-2009)
+   
+   * Software Engineering of Distributed Systems and Components – UOC (2007-2008)
+
 jobs_title: 'Work Experience'
 jobs_list:
   - title: 'Quality Governance Office Manager'
@@ -104,6 +123,9 @@ jobs_list:
 
         * Definition and review of standards
 
+  - title: 'Software Architect'
+    where: 'openTrends'
+    when: '(2004 - 2006)'
 
   - title: 'Software Architect and Development Team Management'
     where: 'Cap Gemini'
