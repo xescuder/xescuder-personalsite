@@ -11,7 +11,7 @@ profile_image: /media/profile-1-250x250.jpg
 about_path: >-
 
   <span class="fas fa-quote-left"></span>
-  I enjoy software engineering, architecture, quality and testing. At my spare time I like to watch tv shows. Curious without limits<span class="fas fa-quote-right"></span>
+  I enjoy software engineering, architecture, quality and testing. In my spare time I like to watch tv shows. Curious without limits<span class="fas fa-quote-right"></span>
 
 hero_slogan: 'V  = [K + S ] x A'
 hero_subtitle: 'V (value) = [K (knowledge) + S (skills)] x A (attitude)'
