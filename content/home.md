@@ -59,9 +59,12 @@ education_list:
     where: 'ISQI'
     when: '2016'
   - title: 'Certified in Professional Scrum Master I'
-    where: 'VUE'
+    where: 'Scrum.org'
     when: '2017'
-  
+  - title: 'Certified Tester - Foundation Level Extension, Agile Tester'
+    where: 'ISTQB'
+    when: '2018'
+    
 
 teaching_title: 'Teaching Experience'
 teaching: >-
