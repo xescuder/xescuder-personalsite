@@ -18,6 +18,7 @@
         {{ partial "network.html" (dict "data" $p) }}
 
         {{ partial "js.html" . }}
+        {{ partial "google-analytics.html" . }}
 
         {{ template "_internal/google_analytics.html" . }}
     </body>
