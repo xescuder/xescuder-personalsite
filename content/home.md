@@ -141,7 +141,7 @@ projects_list:
     when: '(2014 – 2016)'
     description: >-
       
-        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for non professional investors and traders to search and find best stocks, and test his strategy in the past
+        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for non professional investors and traders to search and find best stocks, and test their strategy in the past
 
 
 skills_title: 'Skills'
