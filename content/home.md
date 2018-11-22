@@ -1,7 +1,7 @@
 ---
 title: Xavier Escudero
 name: Xavier Escudero Sabadell
-role: Software and Quality Manager
+role: Quality and Testing Architect Lead 
 born: 04/10/1973
 email: xescuder@gmail.com
 marital_status: Married
