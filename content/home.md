@@ -87,33 +87,24 @@ teaching: >-
 
 jobs_title: 'Work Experience'
 jobs_list:
-  - title: 'Quality Governance Office Manager'
+  - title: 'Quality and Test Lead - Accountable of Quality Governance Office'
     where: 'CTTI (Generalitat de Catalunya)'
-    when: '(Feb 2013– Present)'
+    when: '(Mar 2008 – Present)'
     description: >-
       
-        * Definition of quality standards, processes and tools (quality model). Training and communication. Institutionalization.
+        * Change agent for embracing agile and software engineering best practices.
 
-        * Quality governance of suppliers (for quality control, mainly focused on qualification testing)
+        * Responsible for definition of frameworks, tools, procedures and best practices for testing. Public site at [https://qualitat.solucions.gencat.cat](https://qualitat.solucions.gencat.cat) (after more than 6 years with more than 4K visits by month).
 
-        * Product audits and reviews, from internal quality (requirements, design, source code,...) to external quality (usability, availability, efficiency, portability, ...)
+        * Integration of testing at DevOps pipeline 
+        
+        * Test automation embracing
 
-        * Independence testing: performance testing, exploratory testing, …
+        * Provide consultation, test and quality assessments (code reviews, performance testing, compatibility testing, mobile certification testing)
 
-        * Root cause analysis and diagnostics of difficult problems (availability, performance bottlenecks)
+        * Provide feedback and mentoring on how to improve applications in efficiency, portability and maintainability. 
 
-  - title: 'Quality and Testing Office Manager'
-    where: 'CTTI (Generalitat de Catalunya)'
-    when: '(Mar 2008– Feb 2013)'
-    description: >-
-
-        * Review and support of testing deliverables (test plans, test specifications, scripts, test reports and metrics).
-
-        * Independent test execution: functional testing automation, performance testing
-
-        * Management and execution of task forces to solve incidents with unknown root cause (performance diagnosis, profiling, …)
-
-        * Code reviews
+        * Root cause analysis and profiing of difficult problems (availability, performance bottlenecks, ...)
 
   - title: 'Software architect'
     where: 'CTTI (Generalitat de Catalunya)'
@@ -148,13 +139,11 @@ skills_title: 'Skills'
 
 skills: >-
 
-    * Ability to define and adapt strategies, standards and methodologies. Ability to identify tactical opportunities
+    * Ability to define and adapt strategies, standards and methodologies. Ability to identify innovation opportunities and tools
 
-    * High technical knowledge, which enables efficient management of technical teams and complex projects
+    * High technical knowledge
 
     * Good communication skills and training abilities
-
-    * Ability to develop clear and concise documentation.
 
     * Ability to review and test deliverables, applications and attention to detail.
 
