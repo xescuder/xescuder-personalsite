@@ -14,7 +14,7 @@ about_path: >-
   I enjoy software engineering, architecture, quality and testing. I am also a teacher after work. In my spare time I like to watch tv shows. Curious without limits.<span class="fas fa-quote-right"></span>
 
 hero_slogan: 'Xavier Escudero Sabadell'
-hero_subtitle: 'Software and Quality Manager (mmmm, also Software Engineer in DNA)'
+hero_subtitle: 'Quality and Test Architect Lead (Software Engineer in DNA)'
 hero_buttonText: 'Find out more'
 
 networks_title: Networks
