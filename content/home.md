@@ -87,7 +87,7 @@ teaching: >-
 
 jobs_title: 'Work Experience'
 jobs_list:
-  - title: 'Quality and Test Lead - Accountable of Quality Governance Office'
+  - title: 'Quality and Test Lead - Accountable for Quality Governance Office'
     where: 'CTTI (Generalitat de Catalunya)'
     when: '(Mar 2008 – Present)'
     description: >-
