@@ -5,7 +5,7 @@
     <div class="header-content">
         <div class="header-content-inner">
             {{ if $p.Params.hero_slogan }}
-                <h1>{{ $p.Params.hero_slogan | markdownify  }}</h1>
+                <h2>{{ $p.Params.hero_slogan | markdownify  }}</h2>
             {{ end }}
             <hr>
             {{ if $p.Params.hero_subtitle }}
@@ -13,6 +13,9 @@
             {{ end }}
             {{ if $p.Params.hero_buttonText }}
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ $p.Params.hero_buttonText }}</a>
+            {{ end }}
+            {{ if $p.Params.about_path }}
+                    <p><b>{{ $p.Params.about_path | markdownify }}</b></p>
             {{ end }}
         </div>
     </div>

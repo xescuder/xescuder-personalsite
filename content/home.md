@@ -9,9 +9,9 @@ profile_title: Profile
 profile_image: /media/profile-1-250x250.jpg
 
 about_path: >-
-
   <span class="fas fa-quote-left"></span>
   I enjoy software engineering, architecture, quality and testing. I am also a teacher after work. In my spare time I like to watch tv shows. Curious without limits.<span class="fas fa-quote-right"></span>
+ 
 
 hero_slogan: 'Xavier Escudero Sabadell'
 hero_subtitle: 'Quality and Test Architect Lead (Software Engineer in DNA)'
@@ -128,11 +128,11 @@ jobs_list:
 
 projects_title: 'Projects'
 projects_list:
-  - title: 'Euroscreener - Startup (Chief Technical Officer and Full Stack Developer)'
-    when: '(2014 – 2016)'
+  - title: 'Lightstock screener'
+    when: 'nowadays'
     description: >-
       
-        Technical Manager and Full Stack Developer of EuroStockScreener, a tool for non professional investors and traders to search and find best stocks, and test their strategy in the past
+        Trying to create an application to help novice investors to look for the best stocks and how to buy them. Test the app at: [http://lightstock.herokuapp.com](http://lightstock.herokuapp.com)
 
 
 skills_title: 'Skills'
