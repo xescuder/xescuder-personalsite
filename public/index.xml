@@ -1,32 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Xavier Escudero Sabadell</title>
-    <link>https://example.org/</link>
-    <description>Recent content on Xavier Escudero Sabadell</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://example.org/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/resume/</guid>
-      <description>{{ $p := .Site.GetPage &#34;page&#34; &#34;home.md&#34; }}{{ partial &#34;head.html&#34; (dict &#34;data&#34; $p)}} {{ partial &#34;nav.html&#34; . }} {{ partial &#34;about.html&#34; (dict &#34;data&#34; $p)}}{{ partial &#34;intro.html&#34; (dict &#34;data&#34; $p)}}{{ partial &#34;jobs.html&#34; (dict &#34;data&#34; $p)}}{{ partial &#34;education.html&#34; (dict &#34;data&#34; $p)}}{{ partial &#34;skills.html&#34; (dict &#34;data&#34; $p)}}{{ partial &#34;network.html&#34; (dict &#34;data&#34; $p) }}{{ partial &#34;js.html&#34; . }} {{ template &#34;_internal/google_analytics.html&#34; . }}</description>
-    </item>
-    
-    <item>
-      <title>Xavier Escudero</title>
-      <link>https://example.org/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/home/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
