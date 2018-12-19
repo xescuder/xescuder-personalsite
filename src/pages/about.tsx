@@ -21,7 +21,7 @@ const PageTemplate = css`
 const About: React.FunctionComponent = () => (
   <IndexLayout>
     <Helmet>
-      <title>About me</title>
+      <title>About</title>
     </Helmet>
     <Wrapper className={`${PageTemplate}`}>
       <header className={`${SiteHeader} ${outer}`}>
@@ -39,6 +39,8 @@ const About: React.FunctionComponent = () => (
             <div className="post-content">
               <p>
                 Innovation enthusiast, passionate about technology, software development and testing, I work making software more reliable by driving adoption of best practices and protocols for software, quality and testing teams.
+              </p>
+              <p>I am also a teacher after work. In my spare time I like to watch tv shows. Huge fan of Javascript and React. Curious without limits. I'm currently working at CTTI
               </p>
             </div>
           </PostFullContent>

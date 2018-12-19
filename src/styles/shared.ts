@@ -25,8 +25,7 @@ export const SiteTitle = styled.h1`
   margin: 0;
   padding: 0;
   font-size: 3.8rem;
-  /*font-weight: 700;*/
-  color: ${colors.white}
+  font-weight: 700;
 `;
 
 export const SiteDescription = styled.h2`
@@ -34,7 +33,7 @@ export const SiteDescription = styled.h2`
   margin: 0;
   padding: 5px 0;
   font-size: 2.2rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.5px;
   opacity: 0.8;
 `;
@@ -79,8 +78,9 @@ export const SiteHeader = css`
   padding-bottom: 4px;
   color: #fff;
   /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-  background: ${colors.orange};
+
   /*background: ${darken('0.05', colors.darkgrey)} no-repeat center center;*/
+  background: ${darken('0.05', colors.orange)} no-repeat center center;
   background-size: cover;
 `;
 
@@ -90,8 +90,8 @@ export const SiteHeaderContent = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10vw 4vw;
-  min-height: 50px;
-  max-height: 100px;
+  min-height: 10px;
+  max-height: 30px;
   text-align: center;
 `;
 
@@ -105,8 +105,7 @@ export const SiteHeaderStyles = css`
   z-index: 10;
   display: block;
   height: 80px;
-  background: ${colors.orange};
-  /*background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));*/
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
 
   :before {
     content: '';
@@ -117,7 +116,7 @@ export const SiteHeaderStyles = css`
     left: 0;
     z-index: 10;
     display: block;
-    /*background: rgba(0, 0, 0, 0.18);*/
+    background: rgba(0, 0, 0, 0.18);
   }
 
   :after {
@@ -130,7 +129,7 @@ export const SiteHeaderStyles = css`
     z-index: 10;
     display: block;
     height: 80px;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));*/
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   }
   @media (max-width: 700px) {
     padding-right: 0;

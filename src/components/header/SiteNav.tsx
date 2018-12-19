@@ -25,7 +25,7 @@ const SiteNavStyles = css`
   justify-content: space-between;
   align-items: flex-start;
   overflow-y: hidden;
-  height: 50px;
+  height: 40px;
   font-size: 1.5rem;
   font-weight: bold;
 `;
@@ -54,6 +54,7 @@ const NavStyles = css`
   margin: 0 0 0 -12px;
   padding: 0;
   list-style: none;
+
 
   li {
     display: block;
@@ -139,6 +140,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
     return (
       <nav className={`${isHome ? HomeNavRaise : ''} ${SiteNavStyles}`}>
         <SiteNavLeft>
+          {!isHome && <SiteNavLogo />}
           <ul className={`${NavStyles}`} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
@@ -148,12 +150,8 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/about">About me</Link>
             </li>
             <li role="menuitem">
-              <Link to="/tags/software-engineering/">Software engineering</Link>
-            </li>
-            <li role="menuitem">
               <Link to="/tags/testing/">Testing</Link>
             </li>
-   
           </ul>
         </SiteNavLeft>
         <SiteNavRight>

@@ -60,7 +60,7 @@ const PostFullMeta = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${colors.orange};
+  color: ${colors.midgrey};
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -87,8 +87,7 @@ export const PostFullTitle = styled.h1`
 const PostFullImage = styled.figure`
   margin: 0 -10vw -165px;
   height: 800px;
-  /*background: ${colors.lightgrey} center center;*/
-  background: ${colors.orange};
+  background: ${colors.lightgrey} center center;
   background-size: cover;
   border-radius: 5px;
 
@@ -278,8 +277,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
                     post.frontmatter.tags.length > 0 && (
                       <>
                         <DateDivider>/</DateDivider>
-                        <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}
-                        >
+                        <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                           {post.frontmatter.tags[0]}
                         </Link>
                       </>
@@ -300,8 +298,6 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
 
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
-
-             
             </article>
           </div>
         </main>

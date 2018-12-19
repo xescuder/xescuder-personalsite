@@ -38,7 +38,7 @@ const PostCardImageLink = css`
 
 const PostCardImage = styled.div`
   width: auto;
-  height: 200px;
+  height: 60px;
   background: ${colors.lightgrey} no-repeat center center;
   background-size: cover;
 `;
@@ -75,7 +75,7 @@ const PostCardTags = styled.span`
 
 const PostCardTitle = styled.h2`
   margin-top: 0;
-  color: ${colors.orange}
+  color: ${colors.orange};
 `;
 
 const PostCardExcerpt = styled.section`
@@ -225,24 +225,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({ post }) => {
           </PostCardExcerpt>
         </Link>
         <PostCardMeta className="post-card-meta">
-          <AuthorList>
-            <AuthorListItem>
-              <AuthorNameTooltip className="author-name-tooltip">
-                {post.frontmatter.author.id}
-              </AuthorNameTooltip>
-              <Link
-                className={`${StaticAvatar}`}
-                to={`/author/${_.kebabCase(post.frontmatter.author.id)}/`}
-              >
-                <img
-                  className={`${AuthorProfileImage}`}
-                  src={post.frontmatter.author.avatar.children[0].fixed.src}
-                  alt={post.frontmatter.author.id}
-                />
-              </Link>
-            </AuthorListItem>
-          </AuthorList>
-          <ReadingTime>{post.timeToRead} min read</ReadingTime>
+          <ReadingTime>{post.timeToRead} minutes to read</ReadingTime>
         </PostCardMeta>
       </PostCardContent>
     </article>

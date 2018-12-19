@@ -30,7 +30,7 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: 'Xavier Escudero\'s Blog',
-  description: 'A blog for testers, but also other topics and resources',
+  description: 'A blog for all interested in software testing and other topics',
   coverImage: 'img/blog-cover.jpg',
   lang: 'en',
   siteUrl: 'https://www.xavierescudero.eu/',

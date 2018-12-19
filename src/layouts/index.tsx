@@ -264,8 +264,7 @@ html {
 body {
   overflow-x: hidden;
   /* color: color(var(--midgrey) l(-25%)); */
-
-  color: ${darken('0.25', colors.darkgrey)};
+  color: ${darken('0.25', colors.midgrey)};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   line-height: 1.6em;
@@ -295,7 +294,7 @@ hr {
   height: 1px;
   border: 0;
   /* border-top: 1px solid color(var(--lightgrey) l(+10%)); */
-  border-top: 1px solid ${lighten('0.1', colors.orange)};
+  border-top: 1px solid ${lighten('0.1', colors.lightgrey)};
 }
 
 audio,
@@ -361,7 +360,7 @@ dt {
   float: left;
   margin: 0 20px 0 0;
   width: 120px;
-  color: ${colors.orange};
+  color: ${colors.darkgrey};
   font-weight: 500;
   text-align: right;
 }
@@ -374,7 +373,7 @@ dd {
 blockquote {
   margin: 1.5em 0;
   padding: 0 1.6em 0 1.6em;
-  border-left: ${colors.orange} 0.5em solid;
+  border-left: ${colors.whitegrey} 0.5em solid;
 }
 
 blockquote p {
