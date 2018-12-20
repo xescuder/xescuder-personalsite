@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to my blog"
 author: xescuder
 tags: ["Testing"]
-image: img/700x420_barcelona.jpg
+image: img/welcome.jpg
 date: "2018-05-06T23:46:37.121Z"
 draft: false
 ---
