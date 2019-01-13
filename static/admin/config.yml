@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: xescuder/xescuder-personalsite
 
 media_folder: src/content/img
 public_folder: assets
@@ -7,7 +8,7 @@ public_folder: assets
 collections:
   - name: post
     label: Post
-    folder: content
+    folder: src/content
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
