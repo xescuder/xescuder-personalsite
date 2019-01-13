@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+
+media_folder: src/content/img
+public_folder: assets
+
+collections:
+  - name: post
+    label: Post
+    folder: content
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - { name: title, label: title }
+      - { name: author, label: author }
+      - { name: tags, label: Tags, widget: list, default: ['testing']}
+      - { name: date, label: Date, widget: date }
+      - { name: body, label: Body, widget: markdown }
+
