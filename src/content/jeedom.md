@@ -1,12 +1,16 @@
 ---
 layout: post
-title: "The Purpose of Education"
+title: Jeedom - Alarm scenario
 author: xescuder
-tags: ["domotics"]
-image: img/demo4.jpg
-date: "2012-08-20T15:11:55.000Z"
-draft: false
+tags:
+  - domotics
+date: '2012-08-20T15:11:55.000Z'
 ---
+I've a Raspberry used for domotics (with a Razberry). One of my needs what's how to set an alarm using a Fibaro Presence Sensor and a Neocoolcam Siren. I'm goind to explain how to do it!
 
 
-As I engage in the so-called "bull sessions" around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the "brethren" think that education should equip them with the proper instruments of exploitation so that they can forever trample over the 
+## Plugin installation
+
+First of all download 'Siren' plugin from Jeedom. Gestion des plugins
+
+
