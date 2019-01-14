@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark(limit: 2000) {
         edges {
           node {
-            excerpt
+            excerpt(pruneLength:280)
             timeToRead
             frontmatter {
               title

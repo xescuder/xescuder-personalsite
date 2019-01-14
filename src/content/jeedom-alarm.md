@@ -4,11 +4,21 @@ title: Jeedom - Alarm scenario
 author: xescuder
 tags:
   - domotics
-date: '2012-08-20T15:11:55.000Z'
+date: '2019-01-12T15:11:55.000Z'
 ---
-I've a Raspberry used for domotics (with a Razberry). One of my needs what's how to set an alarm using a Fibaro Presence Sensor and a Neocoolcam Siren. I'm going to explain how to do it!
+One month ago I started to build my domotic center with Jeedom. This tutorial is to show how you can set an alarm with the next equipments:
 
-Prerequisites: If you want to see how to setup Telegram for communication please read []()
+- [Raspberry](https://www.amazon.es/gp/product/B07BDR5PDW/ref=ppx_yo_dt_b_asin_title_o01__o00_s01?ie=UTF8&psc=1)
+- [Razberry](https://www.amazon.es/gp/product/B00BL9QFH6/ref=ppx_yo_dt_b_asin_title_o01__o00_s00?ie=UTF8&psc=1)
+- [Fibaro Presence Sensor](https://www.amazon.es/gp/product/B01CPR7VX4/ref=ppx_yo_dt_b_asin_title_o01__o00_s01?ie=UTF8&psc=1) 
+- [Neocoolcam Siren](https://es.aliexpress.com/item/NEO-COOLCAM-Z-wave-Wireless-Siren-Alarm-Sensor-Compatible-with-Z-wave-Plus-Sensor-Alarm-Home/32810518687.html). 
+- [Xiaomi Gateway](https://es.aliexpress.com/item/Nuevo-Xiaomi-Mijia-Gateway-2th-versi-n-Smart-Home-multifuncional-Home-Kit-para-Xiaomi-Mijia-puerta/32853412923.html)
+- [Xiaomi Door Window Sensors](https://es.aliexpress.com/item/Original-Xiaomi-Door-Window-Sensor-Pocket-Size-xiaomi-Smart-Home-Kits-Alarm-System-work-with-Gateway/32829391822.html)
+
+
+## Prerequisites
+
+First configure Telegram using tutorial [Jeedom-Telegram](./jeedom-telegram)
 
 ## Plugin installation
 
@@ -32,12 +42,12 @@ Prerequisites: If you want to see how to setup Telegram for communication please
 	- Press 'Ajouter mode'
 	- Create a name, for example 'Exit home'
 
-## Zones creation
+## Zone creation
 
-1. From menu 'Zones' define the zones that the alarm has to look out. For each zone:
+1. From menu 'Zones' define the zones that the alarm has to look out. I'm going to define a single zone 'TOTAL' for everything, but you can define any zones you need (perimeter, inside, ...):
 	
 	- Press 'Ajouter zone'
-	- Edit a name zone ('Living room zone', for example)
+	- Edit a name zone ('TOTAL', for example)
 	- Click 'Déclencheur' and select the equipment and the commande that defines trigger for presence or sensor
 
 	For example if you've a Fibaro Sensor like me:
@@ -48,26 +58,27 @@ Prerequisites: If you want to see how to setup Telegram for communication please
 
 	I set 'Activation' to 3 minutes for the zone near my exit door, but 0 minutes for window sensors.
 
-	- Press 'Action immediate' to define an action that has to be launched if previous condition is true. For example, if I want to beep the siren: 
+	Add as many equipments you need in Declencher (I've added after Fibaro Sensor other window sensors)
 
-		* Select the mode we've created ('Exit home')
-		* Enable the two checks
-		* On the second button select the commande to activate the alarm.
-		For example, for a Neocoolcam siren:
-
-		![Set siren on](/img/jeedom_alarm_action_immediate.png)
-
-	- Press 'Action' to create for example a Telegram message
+	- Press 'Action immediate' to create for example a Telegram message when previous conditions are true
 
 		* Press second button and select equipment 'Telegram'
 		* In 'Message field' enter a message like 'Intruder in living home'
 
-Repeat the process for each zone and equipment.
+	- Press 'Action' to define an action that will be launched after 'Activate' time. This is useful when we enter at home, so we need a time to disconnect alarm. For example, if I want to beep the siren: 
 
-1. Return to 'Mode' and add with button '+Zone' all created zones
+	* Select the mode we've created ('TOTAL')
+	* On the second button select the commande to activate the alarm.
+	
+	![Set siren on](/img/jeedom_alarm_action_immediate.png)
+
+	
+1. Return to 'Mode' and add with button '+Zone' the new created zone ('TOTAL')
 
 
 ## Configure messages to receive when alarm is activated and deactivated
+
+Finally we need to set if we need to receive some notification when we activate the alarm and when we deactivate. We're going to use Telegram:
 
 1. Select 'Activation OK' tab. Here we're going to set what to do when we activate the alarm
 
