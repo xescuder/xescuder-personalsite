@@ -18,7 +18,7 @@ One month ago I started to build my domotic center with Jeedom. This tutorial is
 
 ## Prerequisites
 
-First configure Telegram using tutorial [Jeedom-Telegram](./jeedom-telegram)
+First configure Telegram using tutorial [Jeedom-Telegram](/jeedom-telegram)
 
 ## Plugin installation
 
