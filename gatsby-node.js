@@ -1,174 +1,87 @@
-const path = require('path');
-const _ = require('lodash');
+const _ = require('lodash')
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
 
-  // Sometimes, optional fields tend to get not picked up by the GraphQL
-  // interpreter if not a single content uses it. Therefore, we're putting them
-  // through `createNodeField` so that the fields still exist and GraphQL won't
-  // trip up. An empty string is still required in replacement to `null`.
-  switch (node.internal.type) {
-    case 'MarkdownRemark': {
-      const { permalink, layout, primaryTag } = node.frontmatter;
-      const { relativePath } = getNode(node.parent);
-
-      let slug = permalink;
-
-      if (!slug) {
-        slug = `/${relativePath.replace('.md', '')}/`;
-      }
-
-      // Used to generate URL to view this content.
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug || '',
-      });
-
-      // Used to determine a page layout.
-      createNodeField({
-        node,
-        name: 'layout',
-        value: layout || '',
-      });
-
-      createNodeField({
-        node,
-        name: 'primaryTag',
-        value: primaryTag || '',
-      });
-    }
-  }
-};
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-
-  const result = await graphql(`
+  return graphql(`
     {
-      allMarkdownRemark(limit: 2000) {
-        edges {
-          node {
-            excerpt(pruneLength:280)
-            timeToRead
-            frontmatter {
-              title
-              tags
-              date
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 3720) {
-                    aspectRatio
-                    base64
-                    sizes
-                    src
-                    srcSet
-                  }
-                }
-              }
-              author {
-                id
-                bio
-                avatar {
-                  children {
-                    ... on ImageSharp {
-                      fixed(quality: 100) {
-                        src
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            fields {
-              layout
-              slug
-            }
-          }
-        }
-      }
-      allAuthorYaml {
+      allMarkdownRemark(limit: 1000) {
         edges {
           node {
             id
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
+              templateKey
+            }
           }
         }
       }
     }
-  `);
+  `).then(result => {
+    if (result.errors) {
+      result.errors.forEach(e => console.error(e.toString()))
+      return Promise.reject(result.errors)
+    }
 
-  if (result.errors) {
-    console.error(result.errors);
-    throw new Error(result.errors);
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(edge => {
+      const id = edge.node.id
+      createPage({
+        path: edge.node.fields.slug,
+        tags: edge.node.frontmatter.tags,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id,
+        },
+      })
+    })
+
+    // Tag pages:
+    let tags = []
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(edge => {
+      if (_.get(edge, `node.frontmatter.tags`)) {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      }
+    })
+    // Eliminate duplicate tags
+    tags = _.uniq(tags)
+
+    // Make tag pages
+    tags.forEach(tag => {
+      const tagPath = `/tags/${_.kebabCase(tag)}/`
+
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/tags.js`),
+        context: {
+          tag,
+        },
+      })
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  fmImagesToRelative(node) // convert image paths for gatsby images
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
   }
-
-  // Create post pages
-  const posts = result.data.allMarkdownRemark.edges;
-  posts.forEach(({ node }, index) => {
-    const { slug, layout } = node.fields;
-    const prev = index === 0 ? null : posts[index - 1].node;
-    const next = index === posts.length - 1 ? null : posts[index + 1].node;
-
-    createPage({
-      path: slug,
-      // This will automatically resolve the template to a corresponding
-      // `layout` frontmatter in the Markdown.
-      //
-      // Feel free to set any `layout` as you'd like in the frontmatter, as
-      // long as the corresponding template file exists in src/templates.
-      // If no template is set, it will fall back to the default `post`
-      // template.
-      //
-      // Note that the template has to exist first, or else the build will fail.
-      component: path.resolve(`./src/templates/${layout || 'post'}.tsx`),
-      context: {
-        // Data passed to context is available in page queries as GraphQL variables.
-        slug,
-        prev,
-        next,
-        primaryTag: node.frontmatter.tags ? node.frontmatter.tags[0] : '',
-      },
-    });
-  });
-
-  // Create tag pages
-  const tagTemplate = path.resolve('./src/templates/tags.tsx');
-  const tags = _.uniq(
-    _.flatten(
-      result.data.allMarkdownRemark.edges.map(edge => {
-        return _.castArray(_.get(edge, 'node.frontmatter.tags', []));
-      }),
-    ),
-  );
-  tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagTemplate,
-      context: {
-        tag,
-      },
-    });
-  });
-
-  // Create author pages
-  const authorTemplate = path.resolve('./src/templates/author.tsx');
-  result.data.allAuthorYaml.edges.forEach(edge => {
-    createPage({
-      path: `/author/${_.kebabCase(edge.node.id)}/`,
-      component: authorTemplate,
-      context: {
-        author: edge.node.id,
-      },
-    });
-  });
-};
-
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  // adds sourcemaps for tsx in dev mode
-  if (stage === `develop` || stage === `develop-html`) {
-    actions.setWebpackConfig({
-      devtool: 'eval-source-map',
-    });
-  }
-};
+}

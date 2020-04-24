@@ -1,86 +1,77 @@
-const path = require('path');
-
 module.exports = {
   siteMetadata: {
-    title: 'Xavier Escudero"s Blog',
-    description: 'A blog for testing, but also other topics',
-    siteUrl: 'https://www.xavierescudero.eu', // full path to blog - no ending slash
-  },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
+    title: 'Xavier Escudero Blog',
+    description:
+      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
-        path: path.join(__dirname, 'src', 'content'),
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/img`,
+        name: 'images',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-responsive-iframe',
+            resolve: 'gatsby-remark-relative-images',
             options: {
-              wrapperStyle: 'margin-bottom: 1rem',
+              name: 'uploads',
             },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-abbr',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1170,
-              quality: 100,
-              linkImagesToOriginal: false
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
             },
           },
         ],
       },
     },
-    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-plugin-canonical-urls',
+      resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        siteUrl: 'https://www.xavierescudero.eu',
-      },
-    },
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-yaml',
-    'gatsby-plugin-feed',
-    {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        trackingId: 'UA-122939408-1',
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // IP anonymization for GDPR compliance
-        anonymize: true,
-        // Disable analytics for users with `Do Not Track` enabled
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**'],
-        // Specifies what percentage of users should be tracked
-        sampleRate: 100,
-        // Determines how often site speed tracking beacons will be sent
-        siteSpeedSampleRate: 10,
+        develop: true, // Activates purging in npm run develop
+        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
-    },
+    }, // must be after other CSS plugins
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
-};
+}
