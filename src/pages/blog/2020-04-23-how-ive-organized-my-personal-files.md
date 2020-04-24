@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: How to organize your photo files
 date: 2017-01-04T15:04:10.000Z
-description: We’re proud to announce that we’ll be offering a small batch of
-  Jamaica Blue Mountain coffee beans in our store next week.
+description: Do you need to organize your photo files? This is gonna answer
+how I've done!
 featuredpost: true
 featuredimage: /img/adult-apple-devices-blur-camera-442573.jpg
 tags:
