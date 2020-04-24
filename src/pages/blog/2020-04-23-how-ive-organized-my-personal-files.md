@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: How to organize your photo files
 date: 2017-01-04T15:04:10.000Z
-description: Do you need to organize your photo files? This is gonna answer
-how I've done!
+description: Do you need to organize your photo files
 featuredpost: true
 featuredimage: /img/adult-apple-devices-blur-camera-442573.jpg
 tags:
