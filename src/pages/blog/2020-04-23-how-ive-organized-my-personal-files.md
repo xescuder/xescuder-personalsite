@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How to organize your photo files
+title: Organize your photo files
 date: 2017-01-04T15:04:10.000Z
 description: Do you need to organize your photo files
 featuredpost: true
