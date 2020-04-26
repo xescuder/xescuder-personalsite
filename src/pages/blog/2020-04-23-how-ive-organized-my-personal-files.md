@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Organize your photo files
-date: 2017-01-04T15:04:10.000Z
+date: 2020-04-24T14:04:10.000Z
 description: Do you need to organize your photo files
 featuredpost: true
 featuredimage: /img/adult-apple-devices-blur-camera-442573.jpg
