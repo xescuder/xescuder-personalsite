@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Organize your bookmarks
-date: 2020-04-26T11:39:23.352Z
+date: 2020-04-26T17:29:08.318Z
 description: Learn how I manage the interesting information I see at Internet.
 featuredpost: true
 featuredimage: /img/white-printer-paper-186422.jpg
