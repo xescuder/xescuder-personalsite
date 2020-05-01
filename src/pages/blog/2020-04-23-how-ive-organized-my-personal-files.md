@@ -10,62 +10,85 @@ tags:
 ---
 ![](/img/adult-apple-devices-blur-camera-442573.jpg)
 
-A lot of times I've wanted to sort all my photo files. Finally I decided to do it this month. But I didn't expect it was difficult to decide about:
+A lot of times I've wanted to sort all my photo files (thousands!). Finally I decided to do it this month. But I didn't expect that the most difficult is to know how:
 
-* How do I organize the files in directories?
 * What file naming convention should I use?
-* There's any tool that can help me to change current file names (a thousands of files)? There's a lot of files named DSCN2394.jpg,   img348358.jpg (it depends on camera, mobile, ...)
+* How to organize them in folders?
+* Do I need to do all changes by hand? There's a lot of files named DSCN2394.jpg,   img348358.jpg (it depends on camera, mobile, ...)
 
-To answer these, think yourself, how I would search my content? 
+## Chronological or Thematical? 
 
-## Repeatable or non repeatable?
+The first that it comes to my mind was to organize folders by year and then by theme or event inside. I started with this strategy but I realize different things:
 
-### Years and events
+\- I don't always remember on which year I was in some place
 
-The usual way to find anything it is by **years** and then by **event** and **subject/place**. I can (more or less) think that in 2008 it was the baptism of my first child, so then I would expect:
+\- There are some events that repeat every year, like home photos, vacancies (I've spent my last 20 years going at the same place, ...). For these photos if I am interested I want to see them all in one, not by year (I don't want to navigate by year and by place then).  
 
-\- To find in 2008 a folder `Noa's Baptism` (baptism is the event, Noa is the subject)
+Finally I decided to use a mix of thematical and chronological:
 
-\- To find in 2019 a folder `Italy Holidays` (holidays is the event, Italy is the place)
+```bash
+├── Birthdays
+│   ├── 1980s
+│   ├── 1990s
+│   ├── 2000s
+│   │   ├── 2008-06-01 Noa's Birthday
+│   │   ├── 2008-10-04 Xavier's Birthday
+│   ├── 2010s
+│   ├── 2020s
+├── Everyday
+│   ├── Home
+├── Sports
+│   ├── 2010s
+│   ├── 2020s
+├── Holidays
+│   ├── Sant Salvador
+```
 
-### Photos not related to a single event
+All media content (I use Onedrive) is organized in:
 
-But it's always like this? 
-
-I've spent my holidays for the last 20 years at the same place. Day by day a take photos that are not related to any event (some photos at the beach, some others children playing with their friends at the swimming pool, ...). How can I find these photos? 
-
-You can decide to create a folder 'Holidays at Sant Salvador' for each year. But what I prefer is to see everything in one folder, and let the naming files of photos to say the year of shot.
-
-Another example where I've applied this convention is for my childhood. I've several photos but none of them are for a single event. 
-
-\- `Xavier's Childhood`
-
-\- `Sant Salvador Holidays`
+```bash
+├── Media
+│   ├── Photos
+│   ├── Videos
+│   ├── Audio
+```
 
 ## File naming
 
-Now the big question. How do I name the files? I've seen some people that uses folders as if they are linked to their files as a blood brotherhood. You need to forget that. My files need to be complete by theirselves. Then you can find easily in your operating system, ...
+Now the big question. How do I name the files? I've seen some people that does not use a full name for these files, and use only sequential numbers, pretending they are always to be at the parent folder.
 
-`<YYYYMM>-<Event folder name>-<nnnn>`
+What happens if I use search? The files have no information about the event, place or year, so they are not easily searched. 
+
+I prefer to use the next naming convention
+
+`<Folder name>-<nnnn>`
 
 ## How I've massively organized my photos
 
-### Remove repeated photos
+Starting for a big number (thousand) of photos, what can I do? I've used two tools that saved my life!
 
-A lot of photos are repeated (with a number at the end -1,  because I did a backup, ...). In the era of sizing is not a problem, we don't spend time to remove repeated photos. 
+### Remove duplicated and similar photos
 
-I've used a tool named **Duplicate File Finder** that finds:
+Sure you've a lot of repeated photos that you don't know... (backups,...). I've used the tool **Duplicate finder**. It helps to find and remove:
 
-\- Repeated photos (it detects the exact content, despite of different naming or location)
+  * Repeated photos (it detects the exact content, despite of different naming or location)
 
-\- Similar photos. How many photos do you've that are practically exactly the same, but only changing a little the position of one hair? ;)
+ * Similar photos. How many photos do you've that are practically exactly the same, but only changing a little the position of an arm, head, one hair? ;)
 
-### Remove similar photos
+### Rename your files
 
-### Renaming files
+I recommend **Renamer**. It does worth to pay 25$. 
 
-To help in the automatic naming I suggest to use **Renamer** tool for Mac. It does worth to pay 25$.
+I do these steps:
 
-![](/img/captura-de-pantalla-2020-04-25-a-las-11.08.56.png)
+1. Drag the folder with the files you want to rename and select to change folder contents
+1. Use and apply 'Enumeration' with:
+    * Numeración: 001,002,003...
+    * Formato: Texto - Número
 
-Finally, if you've Amazon Premium you can upload your photos free, without limit of storage. You'll see it's great, as you can see photos by specific person, for many persons, ...
+1. Use and apply (after previous one) 'Apply folder name':
+
+   * Carpeta: Padre
+   * Separador: - (I remove all trailing spaces)
+
+- **Amazon Photos** (my backup). If you've Amazon Premium you can upload unlimited photos. You'll see it's great, as it has some Artificial Intelligence and detected faces, hats, water, so you can filter and see all photos by specific person, for many persons, ...
